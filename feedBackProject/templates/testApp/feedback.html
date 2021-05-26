@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/fb.css" %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "container" align="center">
+        <h1>FeedBack Registration</h1><hr>
+        <form method='post'>
+            {{form.as_p}}
+            <input type="submit" class = "btn btn-primary" value="Submit Feedback">
+            {% csrf_token %}
+        </form>
+
+    </div>
+</body>
+</html>

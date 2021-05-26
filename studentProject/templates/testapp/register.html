@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/stdreg.css" %}">
+    <title></title>
+</head>
+<body>
+    <div class = "container" align = "center">
+        <h1>Student Registration Form</h1><hr>
+        <form method = 'POST'>
+            {{form.as_p}}
+            {% csrf_token %}
+            <input type="Submit" class = "btn btn-primary" value="Register ">
+
+        </form>
+
+    </div>
+</body>
+</html>
